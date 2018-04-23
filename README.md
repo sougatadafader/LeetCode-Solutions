@@ -1,2 +1,2 @@
 # LeetCode-Solutions
-Leetcode Problems Solved
+Leetcode Problems Solved while preparing for interviews.
