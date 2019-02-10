@@ -1,7 +1,7 @@
 /*208 / 208 test cases passed.
 Status: Accepted
-Runtime:  7 ms,
-Beats other java submission by 72.78% */
+Runtime:  6 ms,
+Beats other java submission by 93.41% */
 
 
 
@@ -21,34 +21,34 @@ class Solution {
         ListNode result =start;
         
         if((l1!=null) && (l2!=null)){
-            while(next1 !=null && next2!=null){ 
-                if(next1.val< next2.val){
-                    result.next = new ListNode(next1.val);
-                    next1 = next1.next;
+            while(l1 !=null && l2!=null){ 
+                if(l1.val< l2.val){
+                    result.next = new ListNode(l1.val);
+                    l1 = l1.next;
                 }
 
-                else if(next2.val>= next2.val){
-                	result.next = new ListNode(next2.val);
-                    next2 = next2.next;
+                else if(l2.val>= l2.val){
+                	result.next = new ListNode(l2.val);
+                    l2 = l2.next;
                 }
                 
                 result = result.next;
             }
         }
 
-        while(next1!=null)
+        while(l1!=null)
 
         {
-        	result.next = new ListNode(next1.val);
+        	result.next = new ListNode(l1.val);
         	result = result.next;
-            next1= next1.next;
+            l1= l1.next;
         }
 
-        while(next2!=null)
+        while(l2!=null)
         {
-        	result.next = new ListNode(next2.val);
+        	result.next = new ListNode(l2.val);
         	result= result.next;
-            next2= next2.next;
+            l2= l2.next;
         }
         
         return start.next;
